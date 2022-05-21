@@ -1,0 +1,1 @@
+This app assumes coordinates are x,y,x order in yaml file, coordiantes in the yaml file must be a double data type for cpp
