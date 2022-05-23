@@ -17,6 +17,7 @@ pub(crate) struct Point {
 pub(crate) struct Document {
     version: u32,
     dimesions: u32,
+    total_vertices: i32,
     vertexes: Vec<Point>
 }
 
@@ -24,11 +25,12 @@ pub(crate) struct Document {
 // TODO: add check to make sure dimesions matches the length of coordinates
 impl Document {
     fn new(version: u32, dimensions: u32) -> Self {
-        Document { version: version, dimesions: dimensions, vertexes: vec![]}
+        Document { version: version, dimesions: dimensions, total_vertices: 0, vertexes: vec![]}
     }
 
     fn add_vertexes(&mut self, point: Point) {
         self.vertexes.push(point);
+        self.total_vertices += 1;
     }
 }
 
