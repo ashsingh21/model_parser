@@ -13,3 +13,4 @@ name = "waverfront_to_vertices"
 [dependencies]
 serde = {version ="1.0", features = ["derive"]}
 serde_yaml = "0.8"
+clap = { version = "3.1.18", features = ["derive"] }
